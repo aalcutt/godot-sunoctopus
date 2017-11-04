@@ -24,4 +24,44 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 512, 300 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="UI" type="Control" parent="."]
+
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="BossHealth" type="Label" parent="UI"]
+
+margin_left = 495.0
+margin_top = 239.0
+margin_right = 535.0
+margin_bottom = 253.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="label_player_health" type="Label" parent="UI"]
+
+margin_left = 495.0
+margin_top = 581.0
+margin_right = 535.0
+margin_bottom = 595.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 

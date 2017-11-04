@@ -31,7 +31,7 @@ scale = Vector2( 3.02602, 3.06413 )
 texture = SubResource( 1 )
 _sections_unfolded = [ "Region" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 
 position = Vector2( -3.42893, 3.23112 )
 scale = Vector2( 3.02602, 3.06413 )
@@ -42,5 +42,12 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -0.970332, -40.4004 )
 scale = Vector2( 1.37384, 1.22923 )
+
+[node name="shotTimer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 

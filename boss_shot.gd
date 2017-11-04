@@ -1,13 +1,16 @@
 extends Area2D
 
+
 # Member variables
 var vel = Vector2()
-const SPEED = 800
+const SPEED = 400
+const boss_shot_damage = 1
 
 func _ready():
 	set_fixed_process(true)
 
-func start_at(dir, pos, v):
+
+func start_at(dir, pos):
 	rotation = dir
 	position = pos
 	vel = Vector2(SPEED, 0).rotated(dir)
@@ -20,13 +23,8 @@ func _on_lifetime_timeout():
 	
 func _on_visible_exit_screen():
 	queue_free()
-	
-func _on_shot_body_entered( body ):
-	#print(body.get_name())
-	if(body.has_method("damage")):
-		body.damage(1)
 
-func _on_shot_area_entered( area ):
-	#print(area.get_name())
-	if(area.has_method("damage")):
-		area.damage(1)
+func _on_boss_shot_area_entered( area ):
+	print(area.get_name())
+	if(area.get_groups().has("player")):
+		area.damage(boss_shot_damage)

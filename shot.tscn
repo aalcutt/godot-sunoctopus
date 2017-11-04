@@ -38,6 +38,8 @@ position = Vector2( 0.4977, 1.32761 )
 scale = Vector2( 0.924938, 0.720703 )
 shape = SubResource( 2 )
 
+[connection signal="area_entered" from="." to="." method="_on_shot_area_entered"]
+
 [connection signal="body_entered" from="." to="." method="_on_shot_body_entered"]
 
 
