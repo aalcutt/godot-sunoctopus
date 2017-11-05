@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/UI.gd" type="Script" id=1]
+
+[node name="UI" type="CanvasLayer"]
+
+pause_mode = 2
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="BossHealth" type="Label" parent="."]
+
+margin_left = 495.0
+margin_top = 239.0
+margin_right = 535.0
+margin_bottom = 253.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Pause" ]
+
+[node name="label_player_health" type="Label" parent="."]
+
+margin_left = 495.0
+margin_top = 581.0
+margin_right = 535.0
+margin_bottom = 595.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="message" type="Label" parent="."]
+
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 552.0
+margin_bottom = 314.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="message_timer" type="Timer" parent="."]
+
+pause_mode = 1
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = false
+_sections_unfolded = [ "Pause" ]
+
+[node name="pause_popup" type="Panel" parent="."]
+
+visible = false
+self_modulate = Color( 1, 1, 1, 0.47451 )
+anchor_right = 1
+anchor_bottom = 1
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Pause", "Visibility" ]
+
+[node name="pause_text" type="Label" parent="pause_popup"]
+
+self_modulate = Color( 1, 1, 1, 0.497333 )
+anchor_right = 1
+anchor_bottom = 1
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "PAUSED"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Pause" ]
+
+[connection signal="timeout" from="message_timer" to="." method="_on_message_timer_timeout"]
+
+
