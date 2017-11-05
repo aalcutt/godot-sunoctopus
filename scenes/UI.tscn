@@ -14,6 +14,10 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="BossHealth" type="Label" parent="."]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 495.0
 margin_top = 239.0
 margin_right = 535.0
@@ -30,6 +34,10 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="label_player_health" type="Label" parent="."]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 495.0
 margin_top = 581.0
 margin_right = 535.0
@@ -45,6 +53,10 @@ max_lines_visible = -1
 
 [node name="message" type="Label" parent="."]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 512.0
 margin_top = 300.0
 margin_right = 552.0
@@ -71,8 +83,10 @@ _sections_unfolded = [ "Pause" ]
 
 visible = false
 self_modulate = Color( 1, 1, 1, 0.47451 )
-anchor_right = 1
-anchor_bottom = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -83,8 +97,10 @@ _sections_unfolded = [ "Pause", "Visibility" ]
 [node name="pause_text" type="Label" parent="pause_popup"]
 
 self_modulate = Color( 1, 1, 1, 0.497333 )
-anchor_right = 1
-anchor_bottom = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

@@ -15,10 +15,6 @@ _sections_unfolded = [ "Pause" ]
 
 position = Vector2( 537.34, 441.514 )
 
-[node name="player2" parent="." instance=ExtResource( 2 )]
-
-position = Vector2( 537.34, 441.514 )
-
 [node name="sunOctopus" parent="." instance=ExtResource( 3 )]
 
 position = Vector2( 512, 300 )

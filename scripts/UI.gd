@@ -22,6 +22,7 @@ func update():
 	
 func show_message(text):
 	label_message.set_text(str(text))
+	label_message.show()
 	message_timer.start()
 
 func _on_message_timer_timeout():

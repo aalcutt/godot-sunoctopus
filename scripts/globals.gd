@@ -1,8 +1,11 @@
 extends Node
 
+const PLAYER_STARTING_HEALTH = 4
+const BOSS_STARTING_HEALTH = 10
+
 # game variables
-var player_health = 100
-var boss_health = 1
+var player_health = PLAYER_STARTING_HEALTH
+var boss_health = BOSS_STARTING_HEALTH
 var game_over = false
 var paused = false
 
@@ -28,6 +31,6 @@ func goto_scene(path):
 func new_game():
 	print("new game")
 	game_over = false
-	player_health = 10
-	boss_health = 10
+	player_health = PLAYER_STARTING_HEALTH
+	boss_health = BOSS_STARTING_HEALTH
 	goto_scene("res://scenes/game.tscn")
