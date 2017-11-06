@@ -16,11 +16,13 @@ func _ready():
 func game_over():
 	UI.show_message("GAME OVER")
 	reset_timer.start()
+	get_tree().set_pause(true)
 
 func victory():
 	print("victory")
 	UI.show_message("VICTORY!")
 	reset_timer.start()
+	get_tree().set_pause(true)
 
 func _on_reset_timer_timeout():
 	globals.new_game()

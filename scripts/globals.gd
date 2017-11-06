@@ -29,7 +29,7 @@ func goto_scene(path):
 	current_scene = new_scene
 	
 func new_game():
-	print("new game")
+	get_tree().set_pause(false)
 	game_over = false
 	player_health = PLAYER_STARTING_HEALTH
 	boss_health = BOSS_STARTING_HEALTH

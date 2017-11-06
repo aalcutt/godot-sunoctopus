@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/sunOctopus.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/world.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/background.png" type="Texture" id=6]
 
 [node name="game" type="Node2D"]
 
@@ -14,26 +15,42 @@ _sections_unfolded = [ "Pause" ]
 [node name="player" parent="." instance=ExtResource( 2 )]
 
 position = Vector2( 537.34, 441.514 )
+z = 1
+_sections_unfolded = [ "Z" ]
 
 [node name="sunOctopus" parent="." instance=ExtResource( 3 )]
 
 position = Vector2( 512, 300 )
 scale = Vector2( 2, 2 )
-_sections_unfolded = [ "Transform" ]
+z = 1
+_sections_unfolded = [ "Transform", "Z" ]
 
 [node name="world" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 512, 300 )
+position = Vector2( 503.376, 298.673 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
 [node name="reset_timer" type="Timer" parent="."]
 
+pause_mode = 2
 process_mode = 1
 wait_time = 5.0
 one_shot = true
 autostart = false
+_sections_unfolded = [ "Pause" ]
+
+[node name="background" type="Sprite" parent="."]
+
+position = Vector2( 512, 300 )
+scale = Vector2( 0.500515, 0.391962 )
+z = -1
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Region", "Transform", "Z" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="timeout" from="reset_timer" to="." method="_on_reset_timer_timeout"]
 
