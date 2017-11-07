@@ -27,7 +27,7 @@ _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="world" parent="." instance=ExtResource( 4 )]
 
-position = Vector2( 503.376, 298.673 )
+position = Vector2( 512, 300 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="UI" parent="." instance=ExtResource( 5 )]

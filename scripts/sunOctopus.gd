@@ -9,7 +9,7 @@ onready var shot_container = get_node("shot_container")
 onready var player_target = get_parent().get_node("player")
 onready var UI = get_parent().get_node("UI")
 
-var shot1_accuracy = .5;
+var shot1_accuracy = .4;
 
 func _ready():
 	set_process(true)

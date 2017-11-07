@@ -28,14 +28,16 @@ func _on_boss_shot_area_entered( area ):
 	if(area.get_groups().has("player")):
 		area.damage(boss_shot_damage)
 	
-
 func _on_boss_shot_body_entered( body ):
 	if(body.get_groups().has("player")):
 		body.damage(boss_shot_damage)
 		queue_free()
 	if(body.get_name() == "TileMap"):
-		var pos = body.world_to_map(body.get_global_position())
-		var id = body.get_cellv(pos)
+		var world = body.get_parent()
+		var pos = position - world.position
+		var mapCoords = body.world_to_map(pos)
+		print(mapCoords)
+		var id = body.get_cellv(mapCoords)
 		var body_name = body.get_tileset().tile_get_name(id)
-		
-
+		print(body_name)
+		body.set_cellv(mapCoords, -1)
