@@ -24,11 +24,11 @@ func _physics_process(delta):
 		
 	if(Input.is_action_pressed("player_left")):
 		get_node("sprite").set_flip_h(true)
-		position.x -= 1
+		#position.x -= 1
 		
 	if(Input.is_action_pressed("player_right")):
 		get_node("sprite").set_flip_h(false)
-		position.x += 1
+		#position.x += 1
 	
 	var motion = velocity * delta
 	move_and_collide(motion)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scripts/world.gd" type="Script" id=1]
 [ext_resource path="res://DungeonTileSet.tres" type="TileSet" id=2]
-[ext_resource path="res://assets/brown_gear.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -19,21 +18,13 @@ cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 cell_half_offset = 2
 cell_tile_origin = 0
 cell_y_sort = false
-collision_use_kinematic = false
+collision_use_kinematic = true
 collision_friction = 1.0
 collision_bounce = 0.0
 collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 tile_data = PoolIntArray( -851986, 0, -720914, 0, -655362, 0, -655361, 0, -720896, 0, -720895, 0, -720894, 0, -720893, 0, -720892, 0, -720891, 0, -589842, 0, -589828, 0, -589827, 0, -655354, 0, -524293, 0, -589809, 0, -458776, 0, -458774, 0, -458772, 0, -458770, 0, -458757, 0, -524273, 0, -524272, 0, -262133, 0, -65509, 0, 65508, 0, 65522, 0, 27, 0, 131044, 0, 131058, 0, 65551, 0, 65563, 0, 196580, 0, 131086, 0, 262130, 0, 327666, 0, 262158, 0, 393202, 0, 327694, 0, 458738, 0, 393230, 0, 655353, 0, 983040, 0, 983041, 0, 983042, 0, 983043, 0, 983044, 0, 1114107, 0, 1114108, 0, 1114109, 0, 1114110, 0, 1114111, 0, 1048576, 0, 1048580, 0, 1048581, 0, 1245201, 0, 1245202, 0, 1245203, 0, 1310737, 0, 1376273, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="gear" type="Sprite" parent="."]
-
-visible = false
-position = Vector2( 0, 50 )
-scale = Vector2( 0.746734, 0.746734 )
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform", "Z" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 

@@ -6,9 +6,6 @@ onready var reset_timer = get_node("reset_timer")
 onready var boss = get_node("sunOctopus")
 
 func _ready():
-	#var screen_size = OS.get_screen_size()
-	#var window_size = OS.get_window_size()
-	#OS.set_window_position(screen_size*0.5 - window_size*0.5)
 	player.connect("player_dead", self, "game_over")
 	boss.connect("boss_dead", self, "victory")
 	UI.show_message("LEVEL 1")
