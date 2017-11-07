@@ -5,7 +5,7 @@
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( -31.7791, -32.9098, 31.9703, -32.5999, 31.9703, 32.4701, -31.7791, 32.4701 )
+points = PoolVector2Array( -6.54832, -7.24848, 7.69309, -7.24848, 8.13129, 7.33672, -6.54832, 7.56461 )
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -24,7 +24,7 @@ points = PoolVector2Array( -10.3556, -9.40847, 9.75767, -9.64808, 10, 10, -10.35
 0/shapes = [ {
 "one_way": false,
 "shape": SubResource( 2 ),
-"shape_transform": Transform2D( 0.623001, 0, 0, 0.61652, 7.57146, 7.91894 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 7.57146, 7.91894 )
 } ]
 1/name = "Rock2"
 1/texture = ExtResource( 1 )

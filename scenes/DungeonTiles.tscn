@@ -9,16 +9,13 @@ scale = Vector2( 0.258156, 0.248193 )
 
 [node name="Rock1" type="Sprite" parent="."]
 
-position = Vector2( -0.338941, -0.877836 )
-scale = Vector2( 3.87363, 4.02912 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 16 )
-_sections_unfolded = [ "Region" ]
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Rock1"]
 
-scale = Vector2( 0.251054, 0.248324 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -31,9 +28,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rock1/StaticBody2D"]
 
 position = Vector2( -0.428543, -0.0810553 )
-scale = Vector2( 0.623001, 0.61652 )
 build_mode = 0
-polygon = PoolVector2Array( -31.7791, -32.9098, 31.9703, -32.5999, 31.9703, 32.4701, -31.7791, 32.4701 )
+polygon = PoolVector2Array( -6.54832, -7.24848, 7.69309, -7.24848, 8.13129, 7.33672, -6.54832, 7.56461 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Rock2" type="Sprite" parent="."]
 
