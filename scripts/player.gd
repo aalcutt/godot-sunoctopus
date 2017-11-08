@@ -6,6 +6,7 @@ onready var shot_timer = get_node("shotTimer")
 onready var alt_shot_timer = get_node("altShotTimer")
 onready var label_player_health = get_parent().get_node("UI").get_node("label_player_health")
 onready var ground_ray = get_node("ground_ray")
+onready var camera = get_node("camera")
 
 var shotscene = preload("res://scenes/shot.tscn")
 var buildshotscene = preload("res://scenes/build_shot.tscn")
@@ -18,13 +19,18 @@ func _ready():
 	add_to_group("player")
 	label_player_health.set_text("health: " + str(globals.player_health))
 	set_physics_process(true)
+	camera.limit_left = 0
+	camera.limit_right = globals.worldwidth
+	camera.limit_top = 0
+	camera.limit_bottom = globals.worldheight
+	camera.drag_margin_bottom = .25
+	camera.drag_margin_top = .25
 	
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	
-	
-	if(Input.is_action_pressed("player_jump") and ground_ray.is_colliding()):
-	#if(Input.is_action_pressed("player_jump")):
+	#if(Input.is_action_pressed("player_jump") and ground_ray.is_colliding()):
+	if(Input.is_action_pressed("player_jump")):
 		velocity.y =- JUMP_SPEED
 		
 	if(Input.is_action_pressed("player_left")):
@@ -47,12 +53,23 @@ func _physics_process(delta):
 		if(alt_shot_timer.get_time_left() == 0):
 			build_shoot()
 	
+	var maxDistance = 1200
+	var minDistance = 600
+	#if(position.y + 50 > 600):
+	#	camera.limit_bottom = globals.worldheight
+	#else:
+	#	camera.current = false
+	#	camera.global_position = Vector2(512,300)
+	#	var zoom = position.y / (maxDistance - minDistance)
+	#	camera.set_zoom(Vector2(zoom,zoom))
+	
 	if(position.x > globals.worldwidth):
 		destroy()
 	if(position.x < 0):
 		destroy()
 	if(position.y > globals.worldheight):
 		destroy()
+		
 	if(position.y < 0):
 		destroy()
 
