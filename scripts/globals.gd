@@ -1,6 +1,6 @@
 extends Node
 
-const PLAYER_STARTING_HEALTH = 4
+const PLAYER_STARTING_HEALTH = 10
 const BOSS_STARTING_HEALTH = 10
 
 # game variables

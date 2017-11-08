@@ -32,8 +32,34 @@ build_mode = 0
 polygon = PoolVector2Array( -6.54832, -7.24848, 7.69309, -7.24848, 8.13129, 7.33672, -6.54832, 7.56461 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="TransparentRock" type="Sprite" parent="."]
+
+modulate = Color( 1, 1, 1, 0.585608 )
+position = Vector2( 475.683, 129.534 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TransparentRock"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 2
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TransparentRock/StaticBody2D"]
+
+build_mode = 1
+polygon = PoolVector2Array( -8.15417, -7.73707, 7.19315, -7.73707, 7.19315, 7.66946, -8.15417, 7.29822 )
+
 [node name="Rock2" type="Sprite" parent="."]
 
+editor/display_folded = true
 position = Vector2( 123.617, -0.877836 )
 texture = ExtResource( 1 )
 region_enabled = true

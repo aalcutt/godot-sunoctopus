@@ -12,7 +12,7 @@ margin = Rect2( 0, 0, 0, 0 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 7.79798, 7.74891 )
 
 [node name="player" type="KinematicBody2D"]
 
@@ -47,7 +47,24 @@ _sections_unfolded = [ "Transform" ]
 [node name="shotTimer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 0.5
+one_shot = true
+autostart = false
+
+[node name="ground_ray" type="RayCast2D" parent="."]
+
+position = Vector2( -2.28222, 9.84789 )
+scale = Vector2( 1, 0.52098 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 1
+type_mask = 15
+
+[node name="altShotTimer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.5
 one_shot = true
 autostart = false
 
