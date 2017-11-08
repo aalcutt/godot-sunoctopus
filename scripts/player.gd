@@ -23,8 +23,8 @@ func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	
 	
-	#if(Input.is_action_pressed("player_jump") and ground_ray.is_colliding()):
-	if(Input.is_action_pressed("player_jump")):
+	if(Input.is_action_pressed("player_jump") and ground_ray.is_colliding()):
+	#if(Input.is_action_pressed("player_jump")):
 		velocity.y =- JUMP_SPEED
 		
 	if(Input.is_action_pressed("player_left")):

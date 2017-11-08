@@ -1,7 +1,7 @@
 extends Node
 
 const PLAYER_STARTING_HEALTH = 10
-const BOSS_STARTING_HEALTH = 10
+const BOSS_STARTING_HEALTH = 50
 
 # game variables
 var player_health = PLAYER_STARTING_HEALTH

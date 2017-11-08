@@ -14,7 +14,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 
-position = Vector2( 537.34, 441.514 )
+position = Vector2( 531.459, 523.109 )
 z = 1
 _sections_unfolded = [ "Z" ]
 

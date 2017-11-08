@@ -4,6 +4,7 @@ onready var player = get_node("player")
 onready var UI = get_node("UI")
 onready var reset_timer = get_node("reset_timer")
 onready var boss = get_node("sunOctopus")
+onready var background_music = get_node("background_music")
 
 func _ready():
 	player.connect("player_dead", self, "game_over")

@@ -57,10 +57,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 512.0
-margin_top = 300.0
-margin_right = 552.0
-margin_bottom = 314.0
+margin_left = 502.0
+margin_top = 11.0
+margin_right = 542.0
+margin_bottom = 25.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -69,6 +69,7 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Margin" ]
 
 [node name="message_timer" type="Timer" parent="."]
 
@@ -114,6 +115,30 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Pause" ]
+
+[node name="Label" type="Label" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 285.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "A - Move Left
+D - Move Right
+Space - Jump
+Left Click - Fire
+Right Click - Build
+
+Kill the boss. Don't fall off. Build new ledges."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="timeout" from="message_timer" to="." method="_on_message_timer_timeout"]
 
