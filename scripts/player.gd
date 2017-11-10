@@ -19,12 +19,6 @@ func _ready():
 	add_to_group("player")
 	label_player_health.set_text("health: " + str(globals.player_health))
 	set_physics_process(true)
-	camera.limit_left = 0
-	camera.limit_right = globals.worldwidth
-	camera.limit_top = 0
-	camera.limit_bottom = globals.worldheight
-	camera.drag_margin_bottom = .25
-	camera.drag_margin_top = .25
 	
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
