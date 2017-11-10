@@ -8,6 +8,7 @@ onready var shoot_timer = get_node("shoot_timer")
 onready var shot_container = get_node("shot_container")
 onready var player_target = get_parent().get_node("player")
 onready var UI = get_parent().get_node("UI")
+onready var sound_damaged = get_node("sound_damaged")
 
 var shot1_accuracy = .4;
 
@@ -24,6 +25,7 @@ func _process(delta):
 func damage(dmg):
 	globals.boss_health -= dmg
 	label_health.set_text(str(globals.boss_health))
+	sound_damaged.play()
 	if(globals.boss_health <= 0):
 		destroy()
 		

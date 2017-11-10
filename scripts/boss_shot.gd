@@ -11,7 +11,6 @@ func _ready():
 
 
 func start_at(dir, pos):
-	rotation = dir
 	position = pos
 	vel = Vector2(SPEED, 0).rotated(dir)
 
@@ -29,7 +28,6 @@ func _on_boss_shot_area_entered( area ):
 		area.damage(boss_shot_damage)
 
 func _on_boss_shot_body_entered( body ):
-	print(body.get_name())
 	if(body.get_groups().has("player")):
 		body.damage(boss_shot_damage)
 	if(body.get_name() == "solidTileMap"):

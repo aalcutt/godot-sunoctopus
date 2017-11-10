@@ -8,7 +8,6 @@ func _ready():
 	set_process(true)
 
 func start_at(dir, pos, v):
-	rotation = dir
 	position = pos
 	vel = Vector2(SPEED, 0).rotated(dir)
 

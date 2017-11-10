@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/0x72_16x16DungeonTileset.v4.png" type="Texture" id=2]
+[ext_resource path="res://assets/player_jump.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/player_damaged.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/player_dead.wav" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -53,8 +56,8 @@ autostart = false
 
 [node name="ground_ray" type="RayCast2D" parent="."]
 
-position = Vector2( -2.28222, 9.84789 )
-scale = Vector2( 1, 0.52098 )
+position = Vector2( -1.82539, 12.9826 )
+scale = Vector2( 1.2698, 0.61894 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )
@@ -67,5 +70,37 @@ process_mode = 1
 wait_time = 0.5
 one_shot = true
 autostart = false
+
+[node name="sound_jump" type="AudioStreamPlayer2D" parent="."]
+
+stream = ExtResource( 3 )
+volume_db = -5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="sound_damaged" type="AudioStreamPlayer2D" parent="."]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="sound_dead" type="AudioStreamPlayer2D" parent="."]
+
+pause_mode = 2
+stream = ExtResource( 5 )
+volume_db = -5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+_sections_unfolded = [ "Pause" ]
 
 

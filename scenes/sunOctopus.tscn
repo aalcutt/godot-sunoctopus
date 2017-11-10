@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/sunOctopus.gd" type="Script" id=1]
 [ext_resource path="res://assets/0x72_16x16DungeonTileset.v4.png" type="Texture" id=2]
+[ext_resource path="res://assets/boss_damaged.wav" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -43,6 +44,16 @@ autostart = false
 
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="sound_damaged" type="AudioStreamPlayer2D" parent="."]
+
+stream = ExtResource( 3 )
+volume_db = -5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
 

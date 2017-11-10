@@ -11,7 +11,6 @@ func _ready():
 	set_process(true)
 
 func start_at(dir, pos, v):
-	rotation = dir
 	position = pos
 	vel = Vector2(SPEED, 0).rotated(dir)
 
@@ -35,8 +34,7 @@ func _on_build_shot_body_entered( body ):
 		var newY = pos.x * sin(angle) + pos.y * cos(angle)
 		var newPos = Vector2(newX,newY)
 		pos = newPos
-		
-		
+
 		var mapCoords = body.world_to_map(pos)
 		var id = body.get_cellv(mapCoords)
 		if(id == 10): #the transparent block

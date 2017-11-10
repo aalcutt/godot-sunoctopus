@@ -6,7 +6,10 @@ onready var shot_timer = get_node("shotTimer")
 onready var alt_shot_timer = get_node("altShotTimer")
 onready var label_player_health = get_parent().get_node("UI").get_node("label_player_health")
 onready var ground_ray = get_node("ground_ray")
-onready var camera = get_node("camera")
+onready var sound_jump = get_node("sound_jump")
+onready var sound_damaged = get_node("sound_damaged")
+onready var sound_dead = get_node("sound_dead")
+
 
 var shotscene = preload("res://scenes/shot.tscn")
 var buildshotscene = preload("res://scenes/build_shot.tscn")
@@ -23,9 +26,10 @@ func _ready():
 func _physics_process(delta):
 	velocity.y += delta * GRAVITY
 	
-	#if(Input.is_action_pressed("player_jump") and ground_ray.is_colliding()):
-	if(Input.is_action_pressed("player_jump")):
+	if(Input.is_action_pressed("player_jump") and ground_ray.is_colliding()):
+	#if(Input.is_action_pressed("player_jump")):
 		velocity.y =- JUMP_SPEED
+		sound_jump.play()
 		
 	if(Input.is_action_pressed("player_left")):
 		get_node("sprite").set_flip_h(true)
@@ -75,13 +79,15 @@ func build_shoot():
 func damage(dmg):
 	globals.player_health -= dmg
 	label_player_health.set_text("health: " + str(globals.player_health))
+	sound_damaged.play()
 	if(globals.player_health <= 0):
 		destroy()
 		
 func destroy():
+	sound_dead.play()
 	emit_signal("player_dead")
 	#disable()
-	queue_free()
+	#queue_free()
 	
 func disable():
 	hide()
