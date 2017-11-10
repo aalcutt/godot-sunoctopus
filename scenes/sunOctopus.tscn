@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/sunOctopus.gd" type="Script" id=1]
 [ext_resource path="res://assets/0x72_16x16DungeonTileset.v4.png" type="Texture" id=2]
 [ext_resource path="res://assets/boss_damaged.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/boss_shot2.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 
@@ -55,6 +56,25 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
+[node name="shoot2_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = false
+autostart = false
+
+[node name="sound_shot2" type="AudioStreamPlayer2D" parent="."]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
 [connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
+
+[connection signal="timeout" from="shoot2_timer" to="." method="_on_shoot2_timer_timeout"]
 
 
