@@ -47,23 +47,12 @@ func _physics_process(delta):
 		if(alt_shot_timer.get_time_left() == 0):
 			build_shoot()
 	
-	var maxDistance = 1200
-	var minDistance = 600
-	#if(position.y + 50 > 600):
-	#	camera.limit_bottom = globals.worldheight
-	#else:
-	#	camera.current = false
-	#	camera.global_position = Vector2(512,300)
-	#	var zoom = position.y / (maxDistance - minDistance)
-	#	camera.set_zoom(Vector2(zoom,zoom))
-	
 	if(position.x > globals.worldwidth):
 		destroy()
 	if(position.x < 0):
 		destroy()
 	if(position.y > globals.worldheight):
 		destroy()
-		
 	if(position.y < 0):
 		destroy()
 

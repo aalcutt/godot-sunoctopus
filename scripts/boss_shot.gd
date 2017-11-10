@@ -29,26 +29,18 @@ func _on_boss_shot_area_entered( area ):
 		area.damage(boss_shot_damage)
 
 func _on_boss_shot_body_entered( body ):
+	print(body.get_name())
 	if(body.get_groups().has("player")):
 		body.damage(boss_shot_damage)
 	if(body.get_name() == "solidTileMap"):
 		var world = body.get_parent()
 		var pos = position - world.position
-		print(pos)
-		var angle = world.rotation * PI / 180
-		print("angle")
-		print(angle)
-		var newY = position.x * sin(angle) + position.y * cos(angle)
-		var newX = position.x * cos(angle) - position.y * sin(angle)
+		var angle = world.get_rotation() * -1
+		var newX = pos.x * cos(angle) - pos.y * sin(angle)
+		var newY = pos.x * sin(angle) + pos.y * cos(angle)
 		var newPos = Vector2(newX,newY)
-		print(newPos)
-		#pos = newPos
-		#y' = y*cos(a) - x*sin(a)
-		#x' = y*sin(a) + x*cos(a)
-		#print(pos * (world.rotation * (PI/2) ))
+		pos = newPos
 		var mapCoords = body.world_to_map(pos)
-		print("mapCoords")
-		print(mapCoords)
 		#var id = body.get_cellv(mapCoords)
 		#var body_name = body.get_tileset().tile_get_name(id)
 		body.set_cellv(mapCoords, -1)

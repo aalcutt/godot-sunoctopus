@@ -17,7 +17,7 @@ func start_at(dir, pos, v):
 
 func _process(delta):
 	position = position + vel * delta
-	
+
 func _on_lifetime_timeout():
 	queue_free()
 	
@@ -30,8 +30,19 @@ func _on_build_shot_body_entered( body ):
 	elif(body.get_name() == "transparentTileMap"):
 		var world = body.get_parent()
 		var pos = position - world.position
+		var angle = world.get_rotation() * -1
+		var newX = pos.x * cos(angle) - pos.y * sin(angle)
+		var newY = pos.x * sin(angle) + pos.y * cos(angle)
+		var newPos = Vector2(newX,newY)
+		pos = newPos
+		
+		
 		var mapCoords = body.world_to_map(pos)
 		var id = body.get_cellv(mapCoords)
 		if(id == 10): #the transparent block
 			body.get_parent().get_node("solidTileMap").set_cellv(mapCoords, 0)
 			queue_free()
+
+
+func _on_build_shot_area_entered( area ):
+	pass # replace with function body

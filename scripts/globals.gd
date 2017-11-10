@@ -11,7 +11,7 @@ var paused = false
 
 
 const worldwidth = 1024
-const worldheight = 1200
+const worldheight = 600
 
 var current_scene = null
 var new_scene = null
