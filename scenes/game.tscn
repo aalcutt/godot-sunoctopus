@@ -16,7 +16,7 @@ _sections_unfolded = [ "Pause" ]
 
 position = Vector2( 512, 523.109 )
 z = 1
-_sections_unfolded = [ "Transform", "Z" ]
+_sections_unfolded = [ "Collision", "Transform", "Z" ]
 
 [node name="sunOctopus" parent="." instance=ExtResource( 3 )]
 

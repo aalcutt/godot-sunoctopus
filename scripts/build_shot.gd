@@ -34,10 +34,9 @@ func _on_build_shot_body_entered( body ):
 		var newY = pos.x * sin(angle) + pos.y * cos(angle)
 		var newPos = Vector2(newX,newY)
 		pos = newPos
-
 		var mapCoords = body.world_to_map(pos)
 		var id = body.get_cellv(mapCoords)
-		if(id == 10): #the transparent block
+		if(id == 1): #the transparent block
 			body.get_parent().get_node("solidTileMap").set_cellv(mapCoords, 0)
 			queue_free()
 

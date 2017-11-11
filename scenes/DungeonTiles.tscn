@@ -29,7 +29,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 position = Vector2( -0.428543, -0.0810553 )
 build_mode = 0
-polygon = PoolVector2Array( -6.54832, -7.24848, 7.69309, -7.24848, 8.13129, 7.33672, -6.54832, 7.56461 )
+polygon = PoolVector2Array( -6.50531, -7.33604, 8.19467, -7.31892, 8.24115, 7.51457, -6.40109, 7.62297 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="TransparentRock" type="Sprite" parent="."]
@@ -56,7 +56,6 @@ _sections_unfolded = [ "Collision" ]
 
 build_mode = 1
 polygon = PoolVector2Array( -8.15417, -7.73707, 7.19315, -7.73707, 7.19315, 7.66946, -8.15417, 7.29822 )
-_sections_unfolded = [ "Visibility" ]
 
 [node name="Rock2" type="Sprite" parent="."]
 

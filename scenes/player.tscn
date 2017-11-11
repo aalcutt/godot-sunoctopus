@@ -26,6 +26,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="sprite" type="Sprite" parent="."]
 
@@ -56,8 +57,8 @@ autostart = false
 
 [node name="ground_ray" type="RayCast2D" parent="."]
 
-position = Vector2( -3.3867, 12.9826 )
-scale = Vector2( 0.74237, 0.61894 )
+position = Vector2( -3.36455, 12.9826 )
+scale = Vector2( 0.791182, 0.61894 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )

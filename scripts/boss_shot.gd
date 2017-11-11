@@ -3,12 +3,11 @@ extends Area2D
 
 # Member variables
 var vel = Vector2()
-const SPEED = 400
+const SPEED = 200
 const boss_shot_damage = 1
 
 func _ready():
 	set_process(true)
-
 
 func start_at(dir, pos):
 	position = pos

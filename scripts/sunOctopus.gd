@@ -19,7 +19,7 @@ func _ready():
 	set_process(true)
 	add_to_group("boss")
 	label_health.set_text(str(globals.boss_health))
-	shoot_timer.set_wait_time(1.5)
+	shoot_timer.set_wait_time(5)
 	shoot_timer.start()
 	shoot2_timer.set_wait_time(10)
 	shoot2_timer.start()
