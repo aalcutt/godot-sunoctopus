@@ -55,7 +55,7 @@ func shoot2():
 	sound_shot2.play()
 
 func _on_sunOctopus_body_entered( body ):
-	print(body.get_name())
+	pass
 	
 func _on_shoot_timer_timeout():
 	shoot1()

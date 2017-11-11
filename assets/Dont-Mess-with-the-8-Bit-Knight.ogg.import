@@ -1,0 +1,10 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dont-Mess-with-the-8-Bit-Knight.ogg-170d1ab7b16a26e27190d0af7aed1771.oggstr"
+
+[params]
+
+loop=true
+loop_offset=0

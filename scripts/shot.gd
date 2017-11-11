@@ -21,14 +21,12 @@ func _on_visible_exit_screen():
 	queue_free()
 	
 func _on_shot_body_entered( body ):
-	print(body.get_name())
 	if(body.get_name() != "player"):
 		if(body.has_method("damage")):
 			body.damage(1)
 		queue_free()
 
 func _on_shot_area_entered( area ):
-	#print(area.get_name())
 	if(area.get_name() != "player"):
 		if(area.has_method("damage")):
 			area.damage(1)
