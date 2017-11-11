@@ -34,7 +34,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="TransparentRock" type="Sprite" parent="."]
 
-modulate = Color( 1, 1, 1, 0.585608 )
+modulate = Color( 1, 1, 1, 0.209922 )
 position = Vector2( 475.683, 129.534 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -56,6 +56,7 @@ _sections_unfolded = [ "Collision" ]
 
 build_mode = 1
 polygon = PoolVector2Array( -8.15417, -7.73707, 7.19315, -7.73707, 7.19315, 7.66946, -8.15417, 7.29822 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Rock2" type="Sprite" parent="."]
 

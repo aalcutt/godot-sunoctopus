@@ -56,8 +56,8 @@ autostart = false
 
 [node name="ground_ray" type="RayCast2D" parent="."]
 
-position = Vector2( -1.82539, 12.9826 )
-scale = Vector2( 1.2698, 0.61894 )
+position = Vector2( -3.3867, 12.9826 )
+scale = Vector2( 0.74237, 0.61894 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 50 )

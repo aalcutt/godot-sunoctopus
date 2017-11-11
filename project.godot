@@ -26,6 +26,10 @@ window/size/resizable=false
 
 singletons=[  ]
 
+[gui]
+
+theme/custom_font="res://fonts/PressStart2P.ttf"
+
 [input]
 
 player_left=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
